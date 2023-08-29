@@ -7,6 +7,15 @@ body {
   min-width: 100%;
   overflow-x: hidden;
   text-align: center;
+  margin: 0;
+}
+
+.wrapper {
+  min-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center;
+  position: relative;
 }
 
 a {
@@ -52,10 +61,10 @@ nav ul li a {
 }
 
 #content-container {
-  width: 100vw;
+  width: 100%;
   position: relative;
   top: -42px;
-  left: -15px;
+  /* left: -15px; */
   display: flex;
   max-height: 450px;
   overflow: hidden;
@@ -63,6 +72,7 @@ nav ul li a {
 }
 
 .splash {
+  width: 100%;
   display: inline-block;
   margin: auto 0px;
 }
@@ -126,7 +136,7 @@ h2 {
 /* PORTFOLIO SECTION */
 
 #portfolio {
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
@@ -245,7 +255,7 @@ h3 {
 
 @media screen and (max-width: 1100px) {
   nav {
-    width: 100vw;
+    width: 100%;
     padding-left: 5px; /* Reduced left padding */
     padding-right: 5px; /* Reduced right padding */
     box-sizing: border-box; /* To include padding inside the total width */
@@ -292,7 +302,25 @@ h3 {
   }
 
   nav {
-    width: 100vw;
+    width: 100%;
+  }
+
+  * {
+    left: auto;
+  }
+
+  #portfolio {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #portfolio h3 {
+    margin: 0 auto;
+  }
+
+  .project-card {
+    margin: 150 auto;
+    left: auto;
   }
 }
 
