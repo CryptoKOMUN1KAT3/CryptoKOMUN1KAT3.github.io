@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Oxanium", cursive;
+}
+
+#wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(../images/572000-texture-grunge-backgrounds-textured-textured-effect.jpg);
+  text-align: center;
+  background-size: 100%;
+  background-position: center;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splash {
+  width: 75%;
+  background-image: url(../images/zp6Dom.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 2px solid #2c2c2c;
+
+  display: flex; /* Added */
+  align-items: stretch; /* Added; This ensures child elements stretch to fit */
+}
+
+.splashcolor {
+  flex-grow: 1; /* Added; This makes the div grow to occupy all available space */
+  background: linear-gradient(to bottom, #63646694, #3a3c3dab);
+}
+
+h1,
+h2,
+p {
+  margin: 17px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #ff0404c7;
+}
+
+h1 {
+  font-size: 2.3rem;
+  text-decoration: underline;
+}
+
+h2 {
+  color: #b9b9b9;
+}
+
+.tokenlogo {
+    width: 30px;
+}
+
+button {
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #636466, #3a3c3d);
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  transition: transform color 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to top, #636466, #3a3c3d);
+  animation: glitchEffect 0.2s infinite;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.socials {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@keyframes glitchEffect {
+  0% {
+    transform: translate(0, 0);
+    color: white;
+  }
+  25% {
+    transform: translate(-3px, 3px);
+    color: red;
+  }
+  50% {
+    transform: translate(3px, -3px);
+    color: white;
+  }
+  75% {
+    transform: translate(-3px, 2px);
+    color: red;
+  }
+  100% {
+    transform: translate(0, 0);
+    color: white;
+  }
+}
+
+.sociallogo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 2px solid #2c2c2c;
+  background-color: #7e7e7e;
+}
+
+p {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.eth {
+  width: 25%;
+}
+
+.endimage {
+  border: 2px solid #2c2c2c;
+  border-radius: 6px;
+}
+
+.KOMUN1KAT3 {
+  color: red;
+  position: relative;
+  float: left;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
