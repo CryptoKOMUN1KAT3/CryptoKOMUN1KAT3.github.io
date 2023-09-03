@@ -64,7 +64,6 @@ nav ul li a {
   width: 100%;
   position: relative;
   top: -42px;
-  /* left: -15px; */
   display: flex;
   max-height: 450px;
   overflow: hidden;
@@ -329,14 +328,29 @@ h3 {
     display: none;
   }
   #content-container {
+    position: relative;
     width: 100%;
     text-align: center;
+    background-image: url(../imgs/komun1kat3_splash.jpg);
+    background-size: cover;
+    padding: 0;
   }
+  #content-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffffcc;
+    pointer-events: none;
+  }
+
   #contact {
     max-width: none;
     display: block;
     text-align: center;
-    margin: 0 auto !important;
+    /* margin: 0 auto !important; */
     left: auto;
     padding-bottom: 10px;
   }
