@@ -1,0 +1,194 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif; /* You can change the font family to your preference */
+  background-color: #111;
+  color: white;
+}
+
+/* Navigation bar styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: linear-gradient(
+    to bottom,
+    #333,
+    #111
+  ); /* Adjust the color values as per your requirements */
+  color: white;
+  z-index: 1000;
+  height: 2.2rem;
+  border-bottom: 1px solid white;
+  font-weight: 300;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#logo {
+  position: relative;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: -7px;
+  left: -18px;
+}
+/* Prompt section styling */
+.tokenlogo {
+  width: 100px;
+}
+
+#prompt-section {
+  margin-top: 50px; /* Adjust this value to give space for the fixed navbar */
+  padding: 20px;
+  text-align: center;
+  min-height: 70vh;
+  font-size: 0.95em;
+  padding: 10px;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.therapist {
+  display: block;
+  margin: 15px;
+}
+.convo {
+  display: block;
+  padding: 6px;
+  margin: 4px auto;
+  cursor: pointer;
+  font-weight: 400;
+  min-width: 20px;
+  outline: none;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.side {
+  display: inline-block;
+}
+
+#talk-to-therapist-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.first {
+  margin-top: 15px;
+}
+
+/* Section styling */
+section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+#prompt-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+#image-container img {
+  width: auto;
+  height: auto;
+  max-width: 230px;
+  max-height: 300px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#image-container img.fade-in {
+  opacity: 1;
+}
+
+#text-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.bounce {
+  animation: bounce 0.3s ease-in-out infinite;
+}
+
+p {
+  text-align: center;
+  margin: 4px auto;
+}
+h1 {
+  text-align: center;
+  margin: 10px auto;
+}
