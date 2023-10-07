@@ -96,6 +96,7 @@ nav a {
   cursor: pointer;
   margin-top: 20px;
   font-weight: 500;
+  animation: bounceButton 0.3s ease-in-out infinite;
 }
 
 .first {
@@ -170,13 +171,13 @@ footer {
   animation-duration: 1s;
 }
 
-@keyframes bounce {
+@keyframes bounceButton {
   0%,
   100% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -191,4 +192,196 @@ p {
 h1 {
   text-align: center;
   margin: 10px auto;
+}
+
+/* Other CSS */
+
+#Tokenomics {
+  background-image: url("./images/tumblr_lt52l5a4Y41qg39ewo1_500.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  padding: 50px 20px;
+  min-height: 400px;
+  overflow: hidden;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-top: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#Tokenomics h1,
+#Tokenomics ul {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  list-style-type: none;
+}
+
+#Tokenomics h1 {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.glitchy-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.glitchy-content h2,
+.glitchy-content ul {
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-5px, 5px);
+    text-shadow: 3px 0 red;
+  }
+  40% {
+    transform: translate(5px, -5px);
+    text-shadow: -3px 0 red;
+  }
+  60% {
+    transform: translate(-3px, 3px);
+    text-shadow: 3px 0 red;
+  }
+  80% {
+    transform: translate(3px, -3px);
+    text-shadow: -3px 0 red;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.glitchy-images {
+  .glitchy-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.glitchy-image {
+  position: absolute;
+  width: 100px;
+}
+
+.glitchy-content {
+  z-index: 10;
+}
+
+#video-jp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./images/dog-cupcake.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0;
+}
+
+#video-jp iframe {
+  transform: rotate(180deg);
+  border: 2px solid red;
+}
+
+#memes {
+  position: relative;
+  padding: 20px;
+  color: white;
+}
+
+.meme-gallery img {
+  width: 150px;
+  margin: 10px;
+}
+
+.memes-background1,
+.memes-background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.memes-background1 {
+  background-image: url("./images/spongebob-spongebob-meme.gif");
+  background-size: cover;
+  animation: memesBlend1 5s infinite alternate;
+}
+
+.memes-background2 {
+  background-image: url("./images/trauma.gif");
+  background-size: cover;
+  animation: memesBlend2 5s infinite alternate;
+}
+
+@keyframes memesBlend1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes memesBlend2 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes memeGlitch {
+  0% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 8px);
+    filter: hue-rotate(45deg);
+  }
+  50% {
+    transform: translate(-5px, -8px);
+    filter: hue-rotate(-45deg);
+  }
+  75% {
+    transform: translate(8px, 5px);
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
 }
