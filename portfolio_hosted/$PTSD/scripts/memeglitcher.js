@@ -1,14 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const memeImages = document.querySelectorAll(".meme-gallery img");
+  const memes = document.querySelectorAll(".meme");
 
-  function applyRandomGlitchToMeme(meme) {
-    const randomDuration = Math.random() * 0.5 + 0.2 + "s";
-    const randomDelay = Math.random() * 2 + "s";
-    const randomPosition = Math.floor(Math.random() * 10) - 5 + "px";
+  const memeFilenames = Array.from({ length: 72 }, (_, i) => i + 136993539)
+    .filter((n) => n !== 136993549 && n !== 136993584 && n !== 136993603)
+    .map((n) => `./images/spastic/file_${n}.png`);
 
-    meme.style.animation = `memeGlitch ${randomDuration} infinite ${randomDelay}`;
-    meme.style.transform = `translate(${randomPosition}, ${randomPosition})`;
+  function changeMemeImage(memeElement) {
+    const randomIndex = Math.floor(Math.random() * memeFilenames.length);
+    memeElement.src = memeFilenames[randomIndex];
+    memeElement.classList.add("glitched");
+
+    setTimeout(() => {
+      memeElement.classList.remove("glitched");
+    }, 200);
   }
 
-  memeImages.forEach(applyRandomGlitchToMeme);
+  memes.forEach((meme) => {
+    setInterval(() => {
+      changeMemeImage(meme);
+    }, Math.random() * 500 + 100);
+  });
 });
