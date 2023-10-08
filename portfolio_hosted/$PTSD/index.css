@@ -11,6 +11,7 @@ body {
   font-family: Arial, sans-serif; /* You can change the font family to your preference */
   background-color: #111;
   color: white;
+  overflow-x: hidden;
 }
 
 /* Navigation bar styling */
@@ -20,11 +21,7 @@ nav {
   left: 0;
   width: 100%;
   padding: 10px 0;
-  background: linear-gradient(
-    to bottom,
-    #333,
-    #111
-  ); /* Adjust the color values as per your requirements */
+  background: linear-gradient(to bottom, #333, #111);
   color: white;
   z-index: 1000;
   height: 2.2rem;
@@ -57,9 +54,30 @@ nav a {
 .tokenlogo {
   width: 100px;
 }
+@keyframes moveBackground {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
 
 #prompt-section {
-  margin-top: 50px; /* Adjust this value to give space for the fixed navbar */
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  min-height: 70vh;
+  font-size: 0.95em;
+  padding: 10px;
+  line-height: 1.5rem;
+  background-image: url(./images/$PTSD.gif);
+  background-repeat: repeat-x;
+  animation: moveBackground 10s linear infinite;
+}
+
+/* #prompt-section {
+  margin-top: 40px;
   padding: 20px;
   text-align: center;
   min-height: 70vh;
@@ -67,7 +85,15 @@ nav a {
   padding: 10px;
   line-height: 1.5rem;
   text-align: center;
+  background-image: url(./images/$PTSD.gif);
+} */
+/* switch above on if returning to therapist functionality */
+
+#prompt-section p {
+  visibility: hidden;
 }
+/* delete above to return to therapist functionality */
+
 .therapist {
   display: block;
   margin: 15px;
@@ -97,6 +123,8 @@ nav a {
   margin-top: 20px;
   font-weight: 500;
   animation: bounceButton 0.3s ease-in-out infinite;
+  display: none;
+  /* turns off the therapist fucntionality trigger button */
 }
 
 .first {
@@ -297,7 +325,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
   background-image: url("./images/dog-cupcake.gif");
   background-size: cover;
   background-position: center;
@@ -314,10 +342,13 @@ h1 {
   position: relative;
   padding: 20px;
   color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
 }
 
 .meme-gallery img {
-  width: 150px;
+  width: 200px;
   margin: 10px;
 }
 
@@ -363,25 +394,66 @@ h1 {
   }
 }
 
-@keyframes memeGlitch {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.meme-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+@keyframes glitchEffect {
   0% {
-    transform: translate(0);
-    filter: hue-rotate(0deg);
+    transform: scale(1);
+    filter: brightness(1);
   }
   25% {
-    transform: translate(5px, 8px);
-    filter: hue-rotate(45deg);
+    transform: scale(1.05);
+    filter: brightness(2);
   }
   50% {
-    transform: translate(-5px, -8px);
-    filter: hue-rotate(-45deg);
+    transform: scale(1);
+    filter: brightness(1);
   }
   75% {
-    transform: translate(8px, 5px);
-    filter: hue-rotate(90deg);
+    transform: scale(0.95);
+    filter: brightness(2);
   }
   100% {
-    transform: translate(0);
-    filter: hue-rotate(0deg);
+    transform: scale(1);
+    filter: brightness(1);
   }
+}
+
+.glitched {
+  animation: glitchEffect 200ms infinite;
+}
+
+.meme img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#socials {
+  background-image: url(./images/loopingNoiseRaw.gif);
+  margin-top: 0;
+  color: red;
 }
