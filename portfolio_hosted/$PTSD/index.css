@@ -1,4 +1,3 @@
-/* Reset styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +7,17 @@
 
 /* Body styling */
 body {
-  font-family: Arial, sans-serif; /* You can change the font family to your preference */
   background-color: #111;
   color: white;
   overflow-x: hidden;
+}
+
+#main-content {
+  display: none;
+  width: 100vw;
+  padding: 0;
+  position: relative;
+  top: -10px;
 }
 
 /* Navigation bar styling */
@@ -65,11 +71,8 @@ nav a {
 
 #prompt-section {
   margin-top: 40px;
-  padding: 20px;
   text-align: center;
-  min-height: 70vh;
   font-size: 0.95em;
-  padding: 10px;
   line-height: 1.5rem;
   background-image: url(./images/$PTSD.gif);
   background-repeat: repeat-x;
@@ -220,6 +223,8 @@ p {
 h1 {
   text-align: center;
   margin: 10px auto;
+  z-index: 98;
+  position: relative;
 }
 
 /* Other CSS */
@@ -247,6 +252,10 @@ h1 {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+h2 {
+  z-index: 99;
 }
 
 #Tokenomics h1,
@@ -347,6 +356,10 @@ h1 {
   margin-top: 0;
 }
 
+#memes h1 {
+  z-index: 98;
+}
+
 .meme-gallery img {
   width: 200px;
   margin: 10px;
@@ -417,6 +430,7 @@ h1 {
   height: 150px;
   margin: 5px;
   overflow: hidden;
+  z-index: 99;
 }
 
 @keyframes glitchEffect {
@@ -453,7 +467,336 @@ h1 {
 }
 
 #socials {
-  background-image: url(./images/loopingNoiseRaw.gif);
-  margin-top: 0;
+  /* background-image: url(./images/loopingNoiseRaw.gif); */
+  margin-top: 15px;
   color: red;
+  font-size: 1.5rem;
+}
+
+/* widget section */
+#widget {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+  background-image: url(./images/white-noise-colourful.gif);
+  text-align: center;
+}
+
+#dextswap-aggregator-widget {
+  z-index: 2;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+@keyframes glitchEffect {
+  0% {
+    text-shadow: 1.5px 0 pink, -1.5px 0 cyan;
+    transform: skew(0deg);
+  }
+  25% {
+    text-shadow: 3px 0 pink, -3px 0 cyan;
+    transform: skew(5deg);
+  }
+  50% {
+    text-shadow: 1.5px 0 pink, -1.5px 0 cyan;
+    transform: skew(-5deg);
+  }
+  75% {
+    text-shadow: 3px 0 pink, -3px 0 cyan;
+    transform: skew(5deg);
+  }
+  100% {
+    text-shadow: 1.5px 0 pink, -1.5px 0 cyan;
+    transform: skew(0deg);
+  }
+}
+
+.instructions {
+  max-width: 75%;
+  line-height: 1.8rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  display: block;
+  color: white;
+  animation: glitchEffect 1s infinite alternate;
+}
+
+.instructions h1,
+.instructions h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 600;
+}
+
+#burn {
+  background-image: url(./images/fire-51.gif.webp);
+  padding: 20px;
+  background-size: cover;
+  margin-top: 0;
+}
+
+#burn h1 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  transform: rotate(180deg);
+  display: inline-block;
+  color: white;
+  animation: flaming 1s infinite;
+  font-size: 2rem;
+}
+
+.ca {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@keyframes flaming {
+  0% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
+      0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
+  }
+  50% {
+    text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff7c00,
+      0 0 45px #ff7c00, 0 0 55px #ff7c00, 0 0 65px #ff7c00;
+    color: yellow;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
+      0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
+  }
+}
+
+#disclaimer {
+  margin-top: 0;
+  background-color: black;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid red;
+}
+
+#disclaim-me {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 500;
+  animation: bounceButton 0.3s ease-in-out infinite;
+  display: block;
+  padding: 6px;
+  margin: 4px auto;
+  cursor: pointer;
+  font-weight: 400;
+  min-width: 20px;
+  outline: none;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+#disclaimer-text {
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: black;
+  color: #333;
+  font-size: 0.7rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* welcome page */
+.split {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background: url("left-image.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background: url("right-image.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+/* Style the header */
+#header {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Style the buttons */
+button {
+  font-size: 2em;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Style the centered content */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.left {
+  left: 0;
+  border-right: 2px solid black;
+  background-image: url("./images/tumblr_lt52l5a4Y41qg39ewo1_500.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.right {
+  right: 0;
+  background-image: url("./images/download.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#header h1,
+#header p {
+  display: block;
+  color: black;
+}
+
+#yes-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 500;
+  display: block;
+  padding: 6px;
+  margin: 4px auto;
+  cursor: pointer;
+  font-weight: 400;
+  min-width: 20px;
+  outline: none;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+#no-button {
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 300;
+  animation: none;
+  display: block;
+  margin: 4px auto;
+  cursor: pointer;
+  font-weight: 300;
+  min-width: 20px;
+  outline: none;
+  background-color: #add8e6;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#no-button:hover {
+  background-color: #ffffff;
+  color: #add8e6;
+  border: 2px solid #add8e6;
+}
+
+.glitch {
+  color: red;
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.glitch::before {
+  color: cyan;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitch-animation 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: pink;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation: glitch-animation 1s infinite linear alternate;
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
