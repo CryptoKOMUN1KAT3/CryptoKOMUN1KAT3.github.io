@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>$PTSD</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/gif" href="./images/$PTSD.gif" />
   </head>
 
   <body>
     <div class="wrapper">
       <section id="welcome-page">
         <div class="split left">
+          <div class="overlay"></div>
           <div class="centered">
             <button id="yes-button">YES</button>
           </div>
@@ -37,32 +39,7 @@
           </ul>
         </nav>
 
-        <div
-          id="prompt-section"
-          style="background-color: black; color: white; padding: 20px"
-        >
-          <img class="tokenlogo" src="./images/$PTSD.gif" alt="token logo" />
-          <p class="first">
-            All these scams, rug pulls and tax farms, devs dumping on their
-            community, callers dumping on their community, PnDs every day.
-          </p>
-          <p>You ape every shit, but still miss the ones that are sending.</p>
-          <p>You buy, it dumps. You sell, it pumps.</p>
-          <p>
-            You bought the dip, but the dip keeps dipping, you sold the pump,
-            but the pump keeps pumping.
-          </p>
-          <p>All your investments from the bullrun are down 99%</p>
-          <p>
-            The next bullrun is starting soon and you just needed to hold those
-            coins but you aped all your money into memecoins and lost it. Now
-            the bullrun will take off without you.
-          </p>
-          <p>Fuck this shit.</p>
-          <button id="talk-to-therapist-button" class="convo">
-            Talk to Therapist
-          </button>
-        </div>
+        <div id="prompt-section"></div>
 
         <section id="Tokenomics">
           <div class="overlay"></div>
@@ -98,15 +75,11 @@
           </div>
         </section>
         <section id="video-jp">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/kBJGaadwNMg?si=ILLe8NrA_0oeNSZn"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <video width="560" height="315" controls>
+            <source src="./images/ptsd-vid.mp4" type="video/mp4" />
+            Your browser does not support the video tag. Lame af cheap ass
+            browser. Get chrome ho.
+          </video>
         </section>
         <section id="widget">
           <div class="overlay2"></div>
@@ -251,6 +224,11 @@
                 onclick="showMessage()"
                 >HERE</a
               >!!!!!
+              <br />
+              GET $PTSD ON
+              <a href="https://www.dextools.io/app/en/ether/pool-explorer"
+                >DEXTOOLS LIVE PAIRS</a
+              >!!
             </h1>
           </section>
           <div class="memes-background1" id="memesBg1"></div>
@@ -267,8 +245,8 @@
         </section>
       </section>
       <footer>
-        <p class="left">All Rights Reserved</p>
-        <p class="right">
+        <p class="footer-left">© All Rights Reserved - $PTSD 2023</p>
+        <p class="footer-right">
           <a
             href="https://cryptokomun1kat3.github.io/"
             target="_blank"
