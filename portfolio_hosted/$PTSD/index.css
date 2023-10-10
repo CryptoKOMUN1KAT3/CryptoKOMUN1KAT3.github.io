@@ -7,9 +7,13 @@
 
 /* Body styling */
 body {
-  background-color: #111;
+  background-color: #000000;
   color: white;
   overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
 }
 
 #main-content {
@@ -57,29 +61,28 @@ nav a {
   left: -18px;
 }
 /* Prompt section styling */
-.tokenlogo {
-  width: 100px;
-}
-@keyframes moveBackground {
-  from {
-    background-position: 100% 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 
 #prompt-section {
-  margin-top: 40px;
   text-align: center;
-  font-size: 0.95em;
-  line-height: 1.5rem;
   background-image: url(./images/$PTSD.gif);
   background-repeat: repeat-x;
   animation: moveBackground 10s linear infinite;
+  background-position: center; /* Updated to center only to ensure vertical centering */
+  height: 300px;
+  margin-top: 45px;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 100% center; /* Added center to ensure vertical centering */
+  }
+  to {
+    background-position: 0 center; /* Added center to ensure vertical centering */
+  }
 }
 
 /* #prompt-section {
+
   margin-top: 40px;
   padding: 20px;
   text-align: center;
@@ -97,10 +100,6 @@ nav a {
 }
 /* delete above to return to therapist functionality */
 
-.therapist {
-  display: block;
-  margin: 15px;
-}
 .convo {
   display: block;
   padding: 6px;
@@ -242,6 +241,7 @@ h1 {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   margin-top: 0;
+  z-index: 0;
 }
 
 .overlay {
@@ -250,8 +250,12 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background-image: url(./images/trauma.gif) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  opacity: 0.5;
   z-index: 1;
+  background-position: center center !important;
 }
 
 h2 {
@@ -342,7 +346,7 @@ h2 {
   margin-top: 0;
 }
 
-#video-jp iframe {
+#video-jp video {
   transform: rotate(180deg);
   border: 2px solid red;
 }
@@ -490,6 +494,7 @@ h2 {
   border: none;
   margin-top: 25px;
   margin-bottom: 25px;
+  overflow-y: hidden;
 }
 
 .overlay2 {
@@ -594,7 +599,8 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid red;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
 }
 
 #disclaim-me {
@@ -629,6 +635,9 @@ footer {
   background-color: black;
   color: #333;
   font-size: 0.7rem;
+  margin-top: 0;
+  position: relative;
+  top: -5px;
 }
 
 footer p {
@@ -638,6 +647,10 @@ footer p {
 footer a {
   color: #333;
   text-decoration: none;
+}
+
+.footer-right a {
+  color: rgb(100, 0, 0);
 }
 
 footer a:hover {
@@ -694,6 +707,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 100 !important;
 }
 
 .left {
@@ -736,6 +750,7 @@ button {
   color: white;
   font-weight: 500;
   border-radius: 4px;
+  z-index: 100 !important;
 }
 
 #no-button {
@@ -798,5 +813,12 @@ button {
   }
   100% {
     transform: translateX(5px);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #video-jp video {
+    width: 400 !important;
+    height: auto !important;
   }
 }
