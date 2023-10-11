@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     getSomeDiv.style.fontSize = "5em";
     getSomeDiv.style.textAlign = "center";
     getSomeDiv.style.paddingTop = "40vh";
-    getSomeDiv.innerText = "THEN GET SOME";
+    getSomeDiv.innerText = "TRY THIS";
     document.body.appendChild(getSomeDiv);
 
     setTimeout(() => {
       window.location.href =
         "https://www.dextools.io/app/en/ether/pool-explorer";
-    }, 2000);
+    }, 800);
   });
 });
