@@ -9,11 +9,12 @@
 body {
   background-color: #000000;
   color: white;
+  width: 100vw;
   overflow-x: hidden;
 }
 
 .wrapper {
-  max-width: 1200px;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -70,7 +71,7 @@ nav a {
   background-repeat: repeat-x;
   animation: moveBackground 10s linear infinite;
   background-position: center; /* Updated to center only to ensure vertical centering */
-  height: 300px;
+  height: 240px;
   margin-top: 45px;
   filter: saturate(250%);
 }
@@ -261,8 +262,29 @@ h1 {
   background-position: center center !important;
 }
 
+.overlay4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(./images/meme-traumatized.gif) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  opacity: 0.5;
+  z-index: 1;
+  background-position: center center !important;
+}
+
 h2 {
   z-index: 99;
+}
+
+#Tokenomics audio {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 45px;
 }
 
 #Tokenomics h1,
@@ -349,11 +371,6 @@ h2 {
   margin-top: 0;
 }
 
-#video-jp video {
-  transform: rotate(180deg);
-  border: 2px solid red;
-}
-
 #memes {
   position: relative;
   padding: 20px;
@@ -361,6 +378,23 @@ h2 {
   width: 100%;
   text-align: center;
   margin-top: 0;
+}
+#memes {
+  position: relative;
+}
+
+#memes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("./images/harold-pain-pain.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale(0.7);
 }
 
 #memes h1 {
@@ -372,7 +406,7 @@ h2 {
   margin: 10px;
 }
 
-.memes-background1,
+/* .memes-background1,
 .memes-background2 {
   position: absolute;
   top: 0;
@@ -412,7 +446,7 @@ h2 {
   50% {
     opacity: 1;
   }
-}
+} */
 
 .overlay {
   position: absolute;
@@ -554,7 +588,7 @@ h2 {
   font-weight: 600;
 }
 
-#burn {
+/* #burn {
   background-image: url(./images/fire-51.gif.webp);
   padding: 20px;
   background-size: cover;
@@ -571,7 +605,7 @@ h2 {
   color: white;
   animation: flaming 1s infinite;
   font-size: 2rem;
-}
+} */
 
 .ca {
   overflow-wrap: break-word;
@@ -579,7 +613,7 @@ h2 {
   word-break: break-all;
 }
 
-@keyframes flaming {
+/* @keyframes flaming {
   0% {
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
       0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
@@ -593,7 +627,7 @@ h2 {
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
       0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
   }
-}
+} */
 
 #disclaimer {
   margin-top: 0;
@@ -822,31 +856,31 @@ button {
 }
 
 @media screen and (max-width: 560px) {
-  #video-jp video {
+  #dextools-widget iframe {
     scale: 0.7;
   }
 }
 
-/* Container for the entire fake chat, including the chat messages container */
 #fakeChatContainer {
   position: relative;
-  margin-top: 20px; /* Adjust as needed */
-  width: 440px; /* Width of the entire chat container */
-  padding: 10px; /* Padding around the chat messages container */
+  margin-top: 20px; 
+  width: 290px; 
+  padding: 10px;
   background-color: rgba(
     0,
     0,
     0,
-    0.5
-  ); /* Background color of the chat container */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for a lifted appearance */
-  height: 200px;
+    0
+  ); 
+  border-radius: 8px; 
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); Shadow for a lifted appearance */
+  height: 180px;
+  margin: 0 auto;
 }
 
 /* Container for chat messages */
 #chatMessagesContainer {
-  max-height: 180px; /* Adjust to fit 4-5 messages */
+  max-height: 160px; /* Adjust to fit 4-5 messages */
   overflow-y: auto;
   overflow-x: hidden;
   background-color: rgba(200, 200, 200, 0);
@@ -854,16 +888,21 @@ button {
   border-radius: 5px;
   text-align: left;
   overflow-y: hidden;
+  margin: 0 auto;
 }
 
 /* Style for individual chat messages */
 .chat-message {
-  background-color: rgba(255, 255, 255, 0.7);
+
+  background-color: rgba(255, 255, 255, 0);
   color: black;
+  text-shadow: 2 2 2 rgb(51, 51, 51);
   padding: 5px;
   border-radius: 5px;
   margin: 5px 0;
-  font-size: 0.8em;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Style for the DEXTswap widget */
@@ -871,15 +910,4 @@ button {
   z-index: 2;
 }
 
-#fakeChatContainer::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
-  pointer-events: none;
-  z-index: 3;
-}
+
