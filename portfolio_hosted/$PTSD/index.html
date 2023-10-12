@@ -12,7 +12,7 @@
     <div class="wrapper">
       <section id="welcome-page">
         <div class="split left">
-          <div class="overlay"></div>
+          <div class="overlay4"></div>
           <div class="centered">
             <button id="yes-button">YES</button>
           </div>
@@ -43,16 +43,20 @@
 
         <section id="Tokenomics">
           <div class="overlay"></div>
+          <audio controls autoplay>
+            <source src="./audio/ptsd-vid.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
           <div class="glitchy-content">
             <h1>Tokenomics</h1>
             <ul>
-              <li><strong>Name/Ticker:</strong> $PTSD</li>
-              <li><strong>Blockchain:</strong> Eth</li>
+              <li><strong>GET $PTSD ON ETH</strong></li>
               <li>
                 <strong>Ca:</strong> 0xf31762441d7FD0507767fdC431A3e4f074246B7A
               </li>
-              <li><strong>Tax:</strong> 1/1</li>
-              <li><strong>Max Supply:</strong> 69,420,000</li>
+              <li><strong>Supply:</strong> 69 420 000</li>
+              <li><strong>LP:</strong> Burnt</li>
+              <li><strong>Tax:</strong> 1%</li>
             </ul>
             <div class="glitchy-images">
               <img
@@ -74,13 +78,13 @@
             </div>
           </div>
         </section>
-        <section id="video-jp">
+        <!-- <section id="video-jp">
           <video width="560" height="315" controls>
             <source src="./images/ptsd-vid.mp4" type="video/mp4" />
             Your browser does not support the video tag. Lame af cheap ass
             browser. Get chrome ho.
           </video>
-        </section>
+        </section> -->
         <section id="widget">
           <div class="oveerlay2"></div>
           <iframe
@@ -91,6 +95,13 @@
             src="https://www.dextools.io/widget-aggregator/en/swap/eth/0xf31762441d7FD0507767fdC431A3e4f074246B7A?theme=dark"
           >
           </iframe>
+          <iframe
+            id="dextools-widget"
+            title="DEXTools Trading Chart"
+            width="500"
+            height="400"
+            src="https://www.dextools.io/widget-chart/en/ether/pe-light/0xa29fe6ef9592b5d408cca961d0fb9b1faf497d6d?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
+          ></iframe>
           <div id="fakeChatContainer">
             <div id="chatMessagesContainer"></div>
           </div>
@@ -123,6 +134,16 @@
               TURMOIL, A CURE. SET THE SLIPPAGE HIGH, AND PLUNGE INTO
               REDEMPTION. YOUR SALVATION AWAITS, IN THE EYE OF THE STORM.
             </p>
+            <p class="chaos-step">
+              6. <span class="highlight">GET RID OF YOUR $PTSD</span> - EMBRACE
+              THE FIRE, FOR IN ITS BLAZE, WE FIND PURIFICATION. SEND YOUR $PTSD
+              TO THE ETERNAL ABYSS,
+              <span class="ca">0x000000000000000000000000000000000000dEaD</span
+              >. WATCH IT ENGULF AND CONSUME, TRANSFORMING YOUR CURSES INTO
+              BLESSINGS, YOUR SHACKLES INTO FREEDOM. FOR IN THE ASHES OF THE
+              OLD, A NEW BEING ARISES, UNBOUND, PURIFIED, ENLIGHTENED.
+            </p>
+
             <h2>EMBRACE THE CHAOS. FIND THE CURE.</h2>
           </div>
         </section>
@@ -130,7 +151,6 @@
           <h1>
             GET DOME MEMES FOR YOUR FUCKING RETARTED SELFINFLICTED PTSDDDDDDD
           </h1>
-          <div class="overlay"></div>
           <div class="meme-gallery">
             <img
               src="./images/spastic/file_136993555.png"
@@ -234,14 +254,14 @@
               >!!
             </h1>
           </section>
-          <div class="memes-background1" id="memesBg1"></div>
-          <div class="memes-background2" id="memesBg2"></div>
+          <!-- <div class="memes-background1" id="memesBg1"></div> -->
+          <!-- <div class="memes-background2" id="memesBg2"></div> -->
         </section>
 
-        <section id="burn">
+        <!-- <section id="burn">
           <h1>want to get rid of your $PTSD?!!!?</h1>
           <h1>send it to: 0x000000000000000000000000000000000000dEaD</h1>
-        </section>
+        </section> -->
         <section id="disclaimer">
           <button id="disclaim-me">Disclaim me Daddy</button>
           <div id="disclaimer-text"></div>
@@ -261,7 +281,6 @@
     </div>
     <script src="./scripts/spastic.js"></script>
     <script src="./scripts/spastic-text.js"></script>
-    <script src="./scripts/background-blender.js"></script>
     <script src="./scripts/memeglitcher.js"></script>
     <script type="text/javascript">
       function showMessage() {
