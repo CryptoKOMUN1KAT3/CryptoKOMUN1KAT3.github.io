@@ -7,19 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "/REVERSAL_INCOMING",
     "/BUY_THE_DIP",
     "/1M_FLOOR_TODAY",
-    "/THIS_CURED_MY_PTSD",
-    "/ON_GOD_THE_DEV_IS_BASED",
-  ];
-
-  const users = [
-    "Whale Khabib",
-    "Come To Dubai",
-    "King Cheng",
-    "0xPickle",
-    "$PTSDenjoyer",
-    "Crypto Nikita",
-    "Ralph Henries",
-    "Sanjeet (never DM first)",
   ];
 
   function getRandomMessage() {
@@ -27,13 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return messages[randomIndex];
   }
 
-  function getRandomUser() {
-    const randomIndex = Math.floor(Math.random() * users.length);
-    return users[randomIndex];
-  }
-
   function getRandomTimeout() {
-    return Math.floor(Math.random() * 800) + 500;
+    return Math.floor(Math.random() * 200) + 100;
   }
 
   function getRandomRepeatCount() {
@@ -49,17 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
       repeatCount = Math.random() > 0.7 ? getRandomRepeatCount() : 1;
     }
 
-    const user = getRandomUser();
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("chat-message");
-    const timestamp = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    });
-
-    messageDiv.innerHTML = `<strong>${user}:</strong> ${message} <span style="font-size: 0.7em; color: grey;">${timestamp}</span>`;
+    messageDiv.innerText = message;
     fakeChatContainer.appendChild(messageDiv);
 
     if (fakeChatContainer.childNodes.length > 5) {
