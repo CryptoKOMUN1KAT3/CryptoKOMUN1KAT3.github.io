@@ -74,6 +74,7 @@ nav a {
   height: 240px;
   margin-top: 45px;
   filter: saturate(250%);
+  position: relative;
 }
 
 @keyframes moveBackground {
@@ -856,23 +857,18 @@ button {
 }
 
 @media screen and (max-width: 560px) {
-  #dextools-widget iframe {
+  #dextools-widget {
     scale: 0.7;
   }
 }
 
 #fakeChatContainer {
   position: relative;
-  margin-top: 20px; 
-  width: 290px; 
+  margin-top: 20px;
+  width: 290px;
   padding: 10px;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0
-  ); 
-  border-radius: 8px; 
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); Shadow for a lifted appearance */
   height: 180px;
   margin: 0 auto;
@@ -893,7 +889,6 @@ button {
 
 /* Style for individual chat messages */
 .chat-message {
-
   background-color: rgba(255, 255, 255, 0);
   color: black;
   text-shadow: 2 2 2 rgb(51, 51, 51);
@@ -910,4 +905,19 @@ button {
   z-index: 2;
 }
 
-
+#toggle-sound-button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 5px 5px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 800;
+  outline: none;
+  background-color: red;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border-radius: 4px;
+  z-index: 6;
+  filter: saturate(100%);
+}
