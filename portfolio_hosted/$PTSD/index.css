@@ -277,6 +277,20 @@ h1 {
   background-position: center center !important;
 }
 
+.overlay5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.26) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  opacity: 0.4;
+  z-index: 4;
+  background-position: center center !important;
+}
+
 h2 {
   z-index: 99;
 }
