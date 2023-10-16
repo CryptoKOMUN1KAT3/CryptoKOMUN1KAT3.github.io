@@ -70,8 +70,8 @@ nav a {
   background-image: url(./images/$PTSD.gif);
   background-repeat: repeat-x;
   animation: moveBackground 10s linear infinite;
-  background-position: center; /* Updated to center only to ensure vertical centering */
-  height: 240px;
+  background-position: center; 
+  height: 190px;
   margin-top: 45px;
   filter: saturate(250%);
   position: relative;
@@ -79,31 +79,18 @@ nav a {
 
 @keyframes moveBackground {
   from {
-    background-position: 100% center; /* Added center to ensure vertical centering */
+    background-position: 100% center;
   }
   to {
-    background-position: 0 center; /* Added center to ensure vertical centering */
+    background-position: 0 center;
   }
 }
 
-/* #prompt-section {
-
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  min-height: 70vh;
-  font-size: 0.95em;
-  padding: 10px;
-  line-height: 1.5rem;
-  text-align: center;
-  background-image: url(./images/$PTSD.gif);
-} */
-/* switch above on if returning to therapist functionality */
 
 #prompt-section p {
   visibility: hidden;
 }
-/* delete above to return to therapist functionality */
+
 
 .convo {
   display: block;
@@ -283,11 +270,11 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 0, 0, 0.26) !important;
+  background-color: rgba(255, 0, 0, 0.5) !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   opacity: 0.4;
-  z-index: 4;
+  z-index: 1;
   background-position: center center !important;
 }
 
@@ -386,6 +373,53 @@ h2 {
   margin-top: 0;
 }
 
+#about {
+  background-image: url(./images/ezgif-5-b913a92351.gif);
+  margin-top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 2px solid white;
+}
+
+#logo2 {
+  position: relative;
+  color: red;
+  font-size: 2rem;
+  z-index: 100;
+}
+
+#about p {
+  position: relative;
+  max-width: 75%;
+  line-height: 2rem;
+  z-index: 100;
+}
+
+#toggle-sound-button {
+  position: relative;
+  padding: 5px 5px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 800;
+  outline: none;
+  background-color: red;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border-radius: 4px;
+  z-index: 6;
+  filter: saturate(100%);
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  z-index: 100;
+}
+
 #memes {
   position: relative;
   padding: 20px;
@@ -421,47 +455,6 @@ h2 {
   margin: 10px;
 }
 
-/* .memes-background1,
-.memes-background2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.memes-background1 {
-  background-image: url("./images/spongebob-spongebob-meme.gif");
-  background-size: cover;
-  animation: memesBlend1 5s infinite alternate;
-}
-
-.memes-background2 {
-  background-image: url("./images/trauma.gif");
-  background-size: cover;
-  animation: memesBlend2 5s infinite alternate;
-}
-
-@keyframes memesBlend1 {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes memesBlend2 {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-} */
 
 .overlay {
   position: absolute;
@@ -548,6 +541,14 @@ h2 {
   margin-bottom: 25px;
   overflow-y: hidden;
 }
+#dextools-widget {
+  z-index: 5;
+}
+
+#inline-graph {
+  display: flex;
+  align-items: start;
+}
 
 .overlay2 {
   position: absolute;
@@ -603,46 +604,12 @@ h2 {
   font-weight: 600;
 }
 
-/* #burn {
-  background-image: url(./images/fire-51.gif.webp);
-  padding: 20px;
-  background-size: cover;
-  margin-top: 0;
-  text-align: center;
-}
-
-#burn h1 {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-all;
-  transform: rotate(180deg);
-  display: inline-block;
-  color: white;
-  animation: flaming 1s infinite;
-  font-size: 2rem;
-} */
 
 .ca {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
 }
-
-/* @keyframes flaming {
-  0% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
-      0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
-  }
-  50% {
-    text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff7c00,
-      0 0 45px #ff7c00, 0 0 55px #ff7c00, 0 0 65px #ff7c00;
-    color: yellow;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff7c00,
-      0 0 40px #ff7c00, 0 0 50px #ff7c00, 0 0 60px #ff7c00;
-  }
-} */
 
 #disclaimer {
   margin-top: 0;
@@ -705,6 +672,7 @@ footer a {
 
 .footer-right a {
   color: rgb(100, 0, 0);
+  margin-right: 10px;
 }
 
 footer a:hover {
@@ -877,61 +845,47 @@ button {
 }
 
 #fakeChatContainer {
-  position: relative;
-  margin-top: 20px;
-  width: 290px;
-  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); Shadow for a lifted appearance */
-  height: 180px;
-  margin: 0 auto;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
 }
 
 /* Container for chat messages */
 #chatMessagesContainer {
-  max-height: 160px; /* Adjust to fit 4-5 messages */
-  overflow-y: auto;
-  overflow-x: hidden;
   background-color: rgba(200, 200, 200, 0);
   padding: 10px;
   border-radius: 5px;
   text-align: left;
-  overflow-y: hidden;
+  overflow: visible;
   margin: 0 auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Style for individual chat messages */
 .chat-message {
   background-color: rgba(255, 255, 255, 0);
-  color: black;
-  text-shadow: 2 2 2 rgb(51, 51, 51);
+  color: rgba(59, 59, 59, 0.247);
+  /* text-shadow: 2 2 0 rgba(252, 2, 2, 0.463); */
   padding: 5px;
   border-radius: 5px;
   margin: 5px 0;
   font-size: 1.2em;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
+  font-size: 7rem;
+  overflow: visible;
+  pointer-events: none;
 }
 
 /* Style for the DEXTswap widget */
 #dextswap-aggregator-widget {
   z-index: 2;
-}
-
-#toggle-sound-button {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  padding: 5px 5px;
-  font-size: 13px;
-  cursor: pointer;
-  font-weight: 800;
-  outline: none;
-  background-color: red;
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-  border-radius: 4px;
-  z-index: 6;
-  filter: saturate(100%);
 }
