@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const yesButton = document.getElementById("yes-button");
   const noButton = document.getElementById("no-button");
+  const toggleSoundButton = document.getElementById("toggle-sound-button");
   const welcomePage = document.getElementById("welcome-page");
   const mainContent = document.getElementById("main-content");
   const getSomeDiv = document.createElement("div");
-  const backgroundMusic = document.getElementById("background-music");
-  const toggleSoundButton = document.getElementById("toggle-sound-button");
+
+  const ptsdAudio = new Audio('./audio/ptsd-vid.mp3');
+  const staticAudio = new Audio('./audio/static.wav');
 
   function glitchEffect() {
     yesButton.classList.add("glitch");
@@ -19,31 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
   yesButton.addEventListener("click", function () {
     welcomePage.style.display = "none";
     mainContent.style.display = "block";
-    backgroundMusic.play();
+    ptsdAudio.play();
   });
 
   noButton.addEventListener("click", function () {
+    staticAudio.play();
+
     welcomePage.style.display = "none";
-    setupGetSomeDiv();
-    document.body.appendChild(getSomeDiv);
-
-    setTimeout(() => {
-      window.location.href =
-        "https://www.dextools.io/app/en/ether/pool-explorer";
-    }, 800);
-  });
-
-  toggleSoundButton.addEventListener("click", function () {
-    if (backgroundMusic.paused) {
-      backgroundMusic.play();
-      toggleSoundButton.innerText = "Sound Off";
-    } else {
-      backgroundMusic.pause();
-      toggleSoundButton.innerText = "Sound On";
-    }
-  });
-
-  function setupGetSomeDiv() {
     getSomeDiv.style.position = "fixed";
     getSomeDiv.style.backgroundImage = "url(./images/white-noise-colourful.gif)";
     getSomeDiv.style.backgroundSize = "cover";
@@ -58,5 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
     getSomeDiv.style.textAlign = "center";
     getSomeDiv.style.paddingTop = "40vh";
     getSomeDiv.innerText = "TRY THIS";
-  }
+    document.body.appendChild(getSomeDiv);
+
+    setTimeout(() => {
+      staticAudio.pause();
+      staticAudio.currentTime = 0;
+      window.location.href = "https://www.dextools.io/app/en/ether/pool-explorer";
+    }, 800);
+  });
+
+  toggleSoundButton.addEventListener('click', () => {
+    if (ptsdAudio.paused) {
+      ptsdAudio.play();
+      toggleSoundButton.textContent = 'Sound Off';
+    } else {
+      ptsdAudio.pause();
+      toggleSoundButton.textContent = 'Sound On';
+    }
+  });
 });
