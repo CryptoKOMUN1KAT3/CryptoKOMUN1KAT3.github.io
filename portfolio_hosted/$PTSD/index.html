@@ -39,25 +39,18 @@
           </ul>
         </nav>
 
-        <div id="prompt-section">
-          <button id="toggle-sound-button">Sound Off</button>
-        </div>
-        <audio id="background-music" loop hidden>
-          <source src="./audio/ptsd-vid.mp3" type="audio/mp3" />
-          Your browser does not support the audio tag.
-        </audio>
+        <div id="prompt-section"></div>
         <section id="Tokenomics">
           <div class="overlay"></div>
-          <div class="overlay5"></div>
 
           <div class="glitchy-content">
             <ul>
               <li><strong>GET $PTSD ON ETH</strong></li>
               <li>
-                <br>
+                <br />
                 <strong>Ca:</strong> 0xf31762441d7FD0507767fdC431A3e4f074246B7A
               </li>
-              <br>
+              <br />
               <li><strong>Supply:</strong> 69 420 000</li>
               <li><strong>LP:</strong> Burnt</li>
               <li><strong>Tax:</strong> 1%</li>
@@ -82,23 +75,38 @@
             </div>
           </div>
         </section>
-        <!-- <section id="video-jp">
-          <video width="560" height="315" controls>
-            <source src="./images/ptsd-vid.mp4" type="video/mp4" />
-            Your browser does not support the video tag. Lame af cheap ass
-            browser. Get chrome ho.
-          </video>
-        </section> -->
+        <section id="about">
+          <h1 id="logo2">$PTSD</h1>
+          <button id="toggle-sound-button">Sound Off</button>
+          <div id="crypto-ptsd-content">
+            <p>
+              All these scams, rug pulls and tax farms, devs dumping on their
+              community, callers dumping on their community, PnDs every day.
+            </p>
+            <p>You ape every shit, but still miss the ones that are sending.</p>
+            <p>You buy, it dumps. You sell, it pumps.</p>
+            <p>
+              You bought the dip, but the dip keeps dipping, you sold the pump,
+              but the pump keeps pumping.
+            </p>
+            <p>All your investments from the bullrun are down 99%</p>
+            <p>
+              The next bullrun is starting soon and you just needed to hold
+              those coins but you aped all your money into memecoins and lost
+              it. Now the bullrun will take off without you.
+            </p>
+            <p>Fuck this shit.</p>
+            <p>Don’t we all have $PTSD from this space?</p>
+
+            <p>Join us if you suffer from crypto $PTSD</p>
+          </div>
+          <div id="fakeChatContainer">
+            <div id="chatMessagesContainer"></div>
+          </div>
+        </section>
         <section id="widget">
           <div class="oveerlay2"></div>
-          <!-- <iframe
-            id="dextswap-aggregator-widget"
-            title="DEXTswap Aggregator"
-            width="400"
-            height="420"
-            src="https://www.dextools.io/widget-aggregator/en/swap/eth/0xf31762441d7FD0507767fdC431A3e4f074246B7A?theme=dark"
-          >
-          </iframe> -->
+
           <iframe
             id="dextools-widget"
             title="DEXTools Trading Chart"
@@ -106,9 +114,6 @@
             height="400"
             src="https://www.dextools.io/widget-chart/en/ether/pe-light/0xa29fe6ef9592b5d408cca961d0fb9b1faf497d6d?theme=dark&chartType=8&chartResolution=30&drawingToolbars=false&headerColor=FF0000&tvPlatformColor=000000&tvPaneColor=FF0000&chartInUsd=false"
           ></iframe>
-          <div id="fakeChatContainer">
-            <div id="chatMessagesContainer"></div>
-          </div>
           <div class="instructions">
             <h1>ENTER THE ABYSS TO FIND THE LIGHT</h1>
             <p class="chaos-step">
@@ -159,7 +164,7 @@
             <img
               src="./images/spastic/file_136993555.png"
               alt="Meme 1"
-              class="meme" 
+              class="meme"
               loading="lazy"
             />
             <img
@@ -311,5 +316,6 @@
     <script src="./scripts/disclaim-me.js" defer></script>
     <script src="./scripts/buttons.js" defer></script>
     <script src="./scripts/fake-chat.js" defer></script>
+    <script src="./scripts/about-section-glitcher.js" defer></script>
   </body>
 </html>
