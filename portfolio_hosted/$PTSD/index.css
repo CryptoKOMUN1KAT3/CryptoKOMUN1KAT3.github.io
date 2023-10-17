@@ -523,7 +523,7 @@ h2 {
 }
 
 /* widget section */
-#widget {
+/* #widget {
   position: relative;
   display: flex;
   justify-content: center;
@@ -532,7 +532,32 @@ h2 {
   margin-top: 0;
   background-image: url(./images/white-noise-colourful.gif);
   text-align: center;
+} */
+
+#widget {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+  text-align: center;
+  z-index: 1;
+  background: none;
 }
+
+#widget::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url('./images/white-noise-colourful.gif');
+  filter: grayscale(60%);
+}
+
 
 #dextswap-aggregator-widget {
   z-index: 2;
@@ -543,6 +568,7 @@ h2 {
 }
 #dextools-widget {
   z-index: 5;
+  filter: grayscale(0);
 }
 
 #inline-graph {
@@ -609,6 +635,8 @@ h2 {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
+  color: rgb(63, 63, 63);
+  font-weight: 600;
 }
 
 #disclaimer {
@@ -840,7 +868,7 @@ button {
 
 @media screen and (max-width: 560px) {
   #dextools-widget {
-    scale: 0.7;
+    scale: 0.7;    
   }
 }
 
