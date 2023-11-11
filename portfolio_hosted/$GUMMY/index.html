@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$GUMMY</title>
+    <link rel="icon" type="image/x-icon" href="./images/gummy.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="welcome-screen">
+    <h1>Welcome to Candytopia!</h1>
+    <button id="enterButton">Begin the $GUMMY adventure!</button>
+</div>
+    <div class="wrapper"  style="display:none;">
+        <nav>
+            <ul>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#buy-gummy"><span class="logo">BUY $GUMMY</span></a></li>
+                <li><a href="#socials">Socials</a></li>
+            </ul>
+        </nav>
+        <section id="banner">
+            <div class="banner-content">
+                <h1 id="gummyText"> <span class="word">
+                    <span>J</span><span>O</span><span>I</span><span>N</span></span>
+                    <span> </span>
+                    <span class="word"><span>T</span><span>H</span><span>E</span></span>
+                    <span> </span>
+                    <span class="word"><span>$</span><span>G</span><span>U</span><span>M</span><span>M</span><span>Y</span></span>
+                    <span> </span>
+                    <span class="word"><span>S</span><span>T</span><span>O</span><span>R</span><span>Y</span><span>!</span></span>
+                  </h1>
+              <button id="startButton">Begin the Adventure!</button>
+              <audio id="gummySong" src="./audio/GummyBearEN.mp3"></audio>
+              <div id="slidesContainer" class="slides-container" style="display:none;"></div>
+              <button id="music" style="display:none;">Sound Off</button>
+</div>
+
+            </div>
+            
+          </section>
+<section id="tokenomics">
+  <img src="./images/OIG (1).jpg" alt="map" class="mobile-map">
+  <img src="./images/map-400px.jpg" usemap="#image-map" class="map">
+
+  <map name="image-map">
+      <area target="" alt="white" title="white" onclick="scrollToElement('#lore-item-4')" coords="50,100,80,111,133,96,166,106,154,120,175,134,201,158,254,127,261,102,310,120,355,123,389,145,397,127,397,27,358,21,347,35,297,20,282,32,262,28,227,42,208,41,185,59,147,31,111,23,90,37,72,39,52,71" shape="poly">
+      <area target="" alt="red" title="red" onclick="scrollToElement('#lore-item-2')" coords="45,140,36,182,35,192,43,223,77,209,89,225,84,257,68,271,77,300,78,336,106,358,124,333,125,293,145,287,159,276,178,255,169,223,139,202,121,200,114,195,116,176,125,155,135,137,113,127,89,131,65,124" shape="poly">
+      <area target="" alt="green" title="green" onclick="scrollToElement('#lore-item-1')" coords="227,159,239,228,267,244,302,238,301,265,345,272,383,275,394,239,391,198,354,187,343,193,337,161,327,138,309,124,274,106" shape="poly">
+      <area target="" alt="yellow" title="yellow" onclick="scrollToElement('#lore-item-3')" coords="190,311,207,319,208,347,235,360,232,340,230,318,242,298,229,288,237,276,242,255,213,249,199,227,172,236,161,275,163,295,187,295" shape="poly">
+      <area target="" alt="orange" title="orange" onclick="scrollToElement('#lore-item-5')" coords="103,118,93,105,77,109,61,105,47,90,13,101,23,114,33,120,44,137,65,128,87,135,103,125" shape="poly">
+  </map>
+    <div class="overlay">
+    <h1>Tokenomics</h1>
+    <p>CA: 0xplaceholderxxxxxxx</p>
+    <p>Total Supply: 1,000,000,000</p>
+    <p>Tax: 0/0</p>
+    <p>Max Wallet: 1%</p>
+    <button class="copyca" onclick="copyToClipboard('placeholder')">Copy CA</button>
+<button class="dextools" onclick="redirectToDexTools()">DexTools</button>
+</div>
+<section id="lore1">
+<h2 class="loretitle">The $GUMMY Lore</h2>
+<!-- <img src="./images/OIG (1).jpg" alt="map" class="map"> -->
+</section>
+<section id="lore">
+  <div class="lore-item" id="lore-item-1">
+      <img src="./images/green.jpg" alt="Description of Image 1">
+      <p>In the dappled light of the Leafy Forest, the Green Gummy Bears thrive, their wisdom as deep as the roots of the ancient trees sheltering them. Resourcefulness is second nature to these bears, who artfully use the forest's rich bounty to live in harmonious balance with nature.</p>
+  </div>
+  <div class="lore-item" id="lore-item-2">
+      <img src="./images/red.jpg" alt="Description of Image 2">
+      <p>The Red Gummy Bears embody courage amidst the Cherry Grove's eternal bloom, their spirits as fiery as the ruby-red cherries above. Fueled by the grove's tangy fruits, they are ever-ready to defend their sweet realm with invigorating fervor.</p>
+  </div>
+  <div class="lore-item" id="lore-item-3">
+      <img src="./images/yellow.jpg" alt="Description of Image 3">
+      <p>In the Lemon Meadows' sunlit embrace, the Yellow Gummy Bears indulge in leisure, as relaxed and radiant as the groves around them. They savor the tranquility of basking in the golden rays, epitomizing the serene joy of their citrus paradise.</p>
+  </div>
+  <div class="lore-item" id="lore-item-4">
+      <img src="./images/white.jpg" alt="Description of Image 4">
+      <p>Perched high in the Coconut Mountains, the White Gummy Bears stand as serene guardians of peace. Their calm demeanor and diplomatic whispers echo through the snowy peaks, fostering unity and accord among the diverse clans of this sugary realm.</p>
+  </div>
+  <div class="lore-item" id="lore-item-5">
+      <img src="./images/orange.jpg" alt="Description of Image 5">
+      <p>And in the lush Mango Valley, the Orange Gummy Bears innovate with a brilliance that mirrors the vibrant orchards they call home. Renowned for their boundless creativity, they craft inventions and art, enriching their world with the sweet nectar of imagination.</p>
+  </div>
+
+    
+  </section>
+  
+
+
+<section id="buy-gummy">
+    <iframe id="dextswap-aggregator-widget"
+    title="DEXTswap Aggregator"
+    width="400"
+    height="420" src="https://www.dextools.io/widget-aggregator/en/swap/eth/0xfb7b4564402e5500db5bb6d63ae671302777c75a"></iframe>
+</section>
+
+<section id="how-to-buy">
+  <h2>How To Buy?</h2>
+  <ol class="buy">
+    <li>
+      <p>Get your $GUMMY in a snap with our Widget!</p>
+      <p>It's super easy – just connect your wallet, select the amount, and make the swap!</p>
+    </li>
+    <li>
+      <p>Or grab your $GUMMY the adventurer's way!</p>
+      <p>Copy our Contract Address, head over to a DEX like Uniswap, and embark on your trading quest.</p>
+    </li>
+    <li>
+      <p>Link up your wallet, decide how many ETH you want to transform into $GUMMY, and get ready for lift-off.</p>
+    </li>
+    <li>
+      <p>Adjust the slippage to avoid trading turbulence, hit that swap button, and watch $GUMMY join your wallet's universe!</p>
+    </li>
+    <li>
+      <p>Congratulations, you're now part of the $GUMMY story!</p>
+    </li>
+  </ol>
+</section>
+
+<section id="socials">
+  <h2>Socials</h2>
+  <p> Engage with the $GUMMY community - that's what we're all about!</p>
+  <div>
+    <button>Telegram</button>
+    <Button>Twitter</Button>
+  </div>
+</section>
+<div class="imagecont">
+  <img src="./images/gummy.png" alt="gummy bear">
+  <h2>Welcome to the $GUMMY family!</h2>
+</div>
+</section>
+<footer> <p>All rights reserved. NFA. DYOR</p>
+  <a class="komun1kat3-link" href="https://cryptokomun1kat3.github.io/">Made by KOMUN1KAT3</a></footer>
+  <script src="./scripts/welcomepage.js"></script>
+            <script src="./scripts/colourheading.js" defer></script>
+            <script src="./scripts/story.js" defer></script>
+            <script>
+               function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    console.log('Copying to clipboard was successful!');
+    alert('CA copied to clipboard!');
+  }, function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
+              
+                function redirectToDexTools() {
+                  window.location.href = 'https://www.dextools.io/';
+                }
+              </script>
+<script src="./scripts/loreanimator.js" defer></script>
+<script src="./scripts/logoflash.js" defer></script>
+<script src="./scripts/scrollscript.js"></script>
+</body>
+</html>
