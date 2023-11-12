@@ -1,0 +1,568 @@
+:root {
+  /* Baby Blue */
+  --baby-blue-lighter: #b3d9ff;
+  --baby-blue-base: #89cff0;
+  --baby-blue-darker: #5ba0d0;
+
+  /* Candy Red */
+  --candy-red-lighter: #ff6b6f;
+  --candy-red-base: #ff3b3f;
+  --candy-red-darker: #c03031;
+
+  /* Gummy Green */
+  --gummy-green-lighter: #a4d77b;
+  --gummy-green-base: #7ac142;
+  --gummy-green-darker: #5d8c31;
+
+  /* Creamy White */
+  --creamy-white-lighter: #ffffff;
+  --creamy-white-base: #f2f2f2;
+  --creamy-white-darker: #e6e6e6;
+
+  --beige: #8e8258;
+  --beige2: rgb(124, 142, 88);
+
+  --mapsea: #969d7c;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+body {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  line-height: 1;
+  color: var(--baby-blue-darker);
+  background-color: var(--beige);
+  margin: 0;
+  padding-top: 38px;
+  font-size: 18px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  /* padding: 0 20px; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: linear-gradient(to bottom, var(--mapsea), var(--beige));
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 10px 20px;
+}
+
+nav a {
+  color: var(--creamy-white-base);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-decoration: wavy !important;
+  text-shadow: 2px 2px 0 var(--baby-blue-darker);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--candy-red-base);
+  text-shadow: 1px 1px 0 var(--gummy-green-base);
+}
+
+#banner {
+  background: linear-gradient(
+    to bottom,
+    var(--creamy-white-darker),
+    var(--mapsea)
+  );
+  text-align: center;
+  padding: 50px 0;
+  color: var(--creamy-white-base);
+  height: 330px;
+  border-bottom: 2px solid white;
+  padding-top: 85px;
+}
+
+.banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  color: var(--gummy-green-lighter);
+}
+
+#banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: inherit;
+  text-shadow: 3px 3px 0 var(--baby-blue-darker);
+}
+
+#banner button,
+#tokenomics button,
+.welcome-screen button {
+  font-size: 1em;
+  color: var(--creamy-white-base);
+  background-color: var(--mapsea);
+  border: none;
+  border-radius: 5px;
+  padding: 7px 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 0 var(--gummy-green-darker);
+  text-shadow: 2px 2px 0 var(--gummy-green-darker);
+}
+
+#banner button:hover, #tokenomics button:hover, .welcome-screen button:hover
+/* #banner button:focus { */ {
+  transform: translateY(2px);
+  background-color: var(--gummy-green-darker);
+  outline: none;
+  box-shadow: none;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+#gummyText span {
+  display: inline-block;
+  animation: wobble 0.3s ease-in-out infinite;
+}
+
+#gummyText span:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+#gummyText span:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.slides-container {
+  position: relative;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 2s; /* Fade effect duration */
+}
+
+.slide img {
+  position: relative;
+  top: 30px;
+  width: 30%;
+  border: 2px solid var(--creamy-white-lighter);
+  transform: translateY(-18px);
+}
+
+.slide-text {
+  width: 50%;
+  text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+/* Ensuring the text is readable over any image */
+.slide-text p {
+  color: var(--gummy-green-darker);
+  text-shadow: 1px 1px 0 var(--beige);
+  display: inline-block;
+  padding: 5px;
+  line-height: 1.5;
+  height: 100%;
+}
+
+#music {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+#music:before {
+  position: fixed !important;
+  right: 10px;
+  bottom: 10px;
+}
+
+#tokenomics {
+  background-image: url(../images/seamless_parchment_texture_by_fantasystock_dyu8dx-pre.jpg);
+  background-position: center;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 700;
+  overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--gummy-green-lighter);
+}
+
+#tokenomics button,
+#music {
+  margin-top: 17px;
+}
+
+.overlay {
+  height: 90%;
+  padding: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.347);
+  width: min-content;
+  margin: 34px auto;
+  border-radius: 5px;
+  box-shadow: 5px 8px 3px rgba(0, 0, 0, 0.584);
+}
+
+#buy-gummy {
+  margin-top: 30px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+#tokenomics p {
+  display: inline-block;
+  margin: 3px 7px;
+  animation: pulse 3s ease-in-out infinite, bob 2s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+#tokenomics h1 {
+  animation: bob 2s ease-in-out infinite;
+}
+
+.mobile-map {
+  display: none;
+}
+
+#lore {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the lore-items if they are less than 100% width */
+  overflow-x: hidden;
+}
+
+.lore-item {
+  border: 2px solid white;
+  display: flex;
+  align-items: center; /* Aligns the image and text vertically */
+  justify-content: space-between; /* Spaces out the image and text */
+  min-height: 350px; /* Ensures the div is at least 350px tall */
+  width: 80%; /* Adjust the width as necessary */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  background-color: #e6e6e648;
+}
+
+.lore-item img {
+  max-height: 350px;
+  max-width: 350px;
+}
+
+.lore-item p {
+  margin: 0;
+  padding: 0 15px;
+  color: var(--candy-red-darker);
+  text-shadow: 2px 2px 0 var(--baby-blue-lighter);
+  line-height: 1.6rem;
+}
+
+/* Add styles for larger screens where side-by-side layout is possible */
+@media (min-width: 600px) {
+  .lore-item {
+    justify-content: start; /* Aligns items to the start of the main axis */
+  }
+
+  .lore-item img,
+  .lore-item p {
+    flex: 1; /* Allows image and text to grow and take up equal space */
+  }
+
+  .lore-item p {
+    padding-left: 20px; /* Adds more padding to the left of the paragraph on larger screens */
+  }
+}
+
+.loretitle,
+#how-to-buy h2,
+#socials h2,
+.imagecont h2,
+.welcome-screen h1,
+#roadmap h2 {
+  font-size: 4rem;
+  color: var(--creamy-white-base);
+  text-shadow: 2px 2px 0 var(--gummy-green-darker);
+  text-decoration: underline;
+  z-index: 3;
+  position: relative;
+}
+
+.imagecont h2 {
+  padding-bottom: 20px;
+  margin-bottom: 0 !important;
+}
+
+#lore1 {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.map {
+  /* max-width: 50%; */
+  margin-bottom: 20px;
+  border: 2px solid white;
+}
+
+#roadmap {
+  border: 2px solid white;
+  max-width: 85%;
+  background-image: url(../images/roadmap.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 60px auto;
+  z-index: 1;
+  position: relative;
+  box-shadow: 4px 4px 12px black;
+  max-width: 1000px;
+}
+
+#roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+#roadmap ol {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+  text-shadow: 1px 1px 0 white;
+  text-align: left;
+  line-height: 2.4rem;
+  padding-left: 45px;
+}
+
+.even {
+  text-align: left;
+  margin-left: 14px;
+}
+
+.odd {
+  text-align: right;
+  margin-right: 14px;
+}
+
+#how-to-buy {
+  max-width: 80%;
+  color: black;
+  text-shadow: 2px 2px 0 var(--gummy-green-darker);
+  margin: 0 auto;
+}
+
+ol {
+  padding-left: 0;
+}
+
+.buy li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#socials p {
+  font-size: 25px;
+  color: black;
+  text-shadow: 2px 2px 0 var(--gummy-green-lighter);
+}
+
+#socials {
+  padding: 25px;
+}
+
+.imagecont {
+  width: 100%;
+}
+
+.imagecont img {
+  max-width: 20%;
+  margin: 0 auto;
+}
+
+#socials button {
+  width: 130px;
+  margin: 25px 5px;
+}
+
+footer p,
+footer a {
+  display: inline-block;
+  margin: 1px 4px;
+  font-size: 0.7em;
+  font-family: monospace;
+  color: var(--gummy-green-darker);
+  transition: all 2s ease-in-out;
+}
+
+footer {
+  background-color: var(--mapsea);
+  border-top: 1px solid white;
+  text-align: center;
+}
+a.komun1kat3-link.glow {
+  color: #fff; /* White text for the glow effect */
+  text-shadow: 0 0 5px #fff, /* White glow */ 0 0 10px #fff, 0 0 15px #fff,
+    0 0 20px #fff; /* Outermost part of the glow */
+}
+
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url("../images/OIG\ \(1\).jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.word {
+  white-space: nowrap;
+}
+
+@media (max-width: 909px) {
+  .banner-content {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .slide-text {
+    width: 90%;
+  }
+}
+@media (max-width: 770px) {
+  .lore-item {
+    display: block !important;
+  }
+
+  .lore-item p,
+  .lore-item img {
+    display: block !important;
+  }
+
+  .lore-item img {
+    margin: 15px auto;
+    width: 30%;
+    border: 2px solid white;
+  }
+}
+
+@media (max-width: 484px) {
+  #banner {
+    height: 330px;
+  }
+  footer a,
+  footer p {
+    display: block;
+  }
+}
+
+@media (max-width: 470px) {
+  nav {
+    padding: 0 5px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 402px) {
+  .map {
+    display: none;
+  }
+
+  .mobile-map {
+    display: block;
+    max-width: 85%;
+    margin: 10px auto;
+  }
+}
